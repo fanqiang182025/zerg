@@ -1,0 +1,483 @@
+[ 2021-08-10T10:12:40+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/recent?count=15
+[ log ] www.king.com/api/v1/product/recent?count=15 [运行时间：0.076418s][吞吐率：13.09req/s] [内存消耗：3,096.16kb] [文件加载：45]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002261s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.018050s ]
+[ sql ] [ SQL ] SELECT * FROM `product` ORDER BY `create_time`  desc LIMIT 15 [ RunTime:0.002870s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:12:40+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/theme/?ids=1,2,3
+[ log ] www.king.com/api/v1/theme/?ids=1,2,3 [运行时间：0.117025s][吞吐率：8.55req/s] [内存消耗：3,221.97kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000642s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.016321s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` IN (1,2,3) [ RunTime:0.004326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.006013s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.000468s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:12:40+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/banner/1
+[ log ] www.king.com/api/v1/banner/1 [运行时间：0.138928s][吞吐率：7.20req/s] [内存消耗：3,307.15kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000853s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.016997s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003708s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.005288s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001011s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.003174s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.000467s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:12:58+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] www.king.com/api/v1/token/user [运行时间：0.302311s][吞吐率：3.31req/s] [内存消耗：3,146.38kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000698s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003994s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oL88T5MjKk3YWYERZvDZKJIMf1yM' LIMIT 1 [ RunTime:0.000970s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:12:59+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] www.king.com/api/v1/token/user [运行时间：0.232687s][吞吐率：4.30req/s] [内存消耗：3,146.33kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000410s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002154s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oL88T5MjKk3YWYERZvDZKJIMf1yM' LIMIT 1 [ RunTime:0.000550s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:12:59+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] www.king.com/api/v1/token/user [运行时间：0.227338s][吞吐率：4.40req/s] [内存消耗：3,146.36kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000699s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002428s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oL88T5MjKk3YWYERZvDZKJIMf1yM' LIMIT 1 [ RunTime:0.000432s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:12:59+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/address
+[ log ] www.king.com/api/v1/address [运行时间：0.058518s][吞吐率：17.09req/s] [内存消耗：3,236.49kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000428s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.003849s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000907s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:12:59+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/by_user?page=1
+[ log ] www.king.com/api/v1/order/by_user?page=1 [运行时间：0.062361s][吞吐率：16.04req/s] [内存消耗：3,696.43kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000532s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.003888s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `user_id` = 60 ORDER BY create_time desc LIMIT 0,16 [ RunTime:0.001542s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:13:04+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/by_user?page=2
+[ log ] www.king.com/api/v1/order/by_user?page=2 [运行时间：0.048543s][吞吐率：20.60req/s] [内存消耗：3,689.49kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000619s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.002574s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `user_id` = 60 ORDER BY create_time desc LIMIT 15,16 [ RunTime:0.000569s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:13:06+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/category/
+[ log ] www.king.com/api/v1/category/ [运行时间：0.044966s][吞吐率：22.24req/s] [内存消耗：2,949.05kb] [文件加载：46]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000534s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.005657s ]
+[ sql ] [ SQL ] SELECT * FROM `category` [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002631s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (6,5,7,4,8,9) [ RunTime:0.000507s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:13:07+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/by_category?id=2
+[ log ] www.king.com/api/v1/product/by_category?id=2 [运行时间：0.043207s][吞吐率：23.14req/s] [内存消耗：3,094.47kb] [文件加载：45]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001249s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002301s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 2 [ RunTime:0.000517s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:13:11+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/5
+[ log ] www.king.com/api/v1/product/5 [运行时间：0.092430s][吞吐率：10.82req/s] [内存消耗：3,360.65kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013324s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.011590s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_image` [ RunTime:0.004772s ]
+[ sql ] [ SQL ] SELECT * FROM `product_image` WHERE  `product_id` = 5 ORDER BY `order`  asc [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_property` [ RunTime:0.009616s ]
+[ sql ] [ SQL ] SELECT * FROM `product_property` WHERE  `product_id` = 5 [ RunTime:0.000418s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:13:22+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/address
+[ log ] www.king.com/api/v1/address [运行时间：0.053045s][吞吐率：18.85req/s] [内存消耗：3,236.45kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001045s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002634s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000625s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:13:25+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] www.king.com/api/v1/order [运行时间：0.057539s][吞吐率：17.38req/s] [内存消耗：3,796.92kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000496s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (5) [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.003079s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.002073s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`order_no` , `user_id` , `total_price` , `snap_img` , `snap_name` , `total_count` , `snap_items` , `snap_address` , `update_time` , `create_time`) VALUES ('E810616053231524' , 60 , 0.02 , 'http://www.king.com/images/product-dryfruit@2.png' , '春生龙眼 500克' , 2 , '[{\"id\":5,\"name\":\"\\u6625\\u751f\\u9f99\\u773c 500\\u514b\",\"counts\":2,\"price\":\"0.01\",\"haveStock\":true,\"totalPrice\":0.02,\"main_img_url\":\"http:\\/\\/www.king.com\\/images\\/product-dryfruit@2.png\"}]' , '{\"id\":37,\"name\":\"\\u5f20\\u4e09\",\"mobile\":\"15234152623\",\"province\":\"\\u5e7f\\u4e1c\\u7701\",\"city\":\"\\u5e7f\\u5dde\\u5e02\",\"county\":\"\\u6d77\\u73e0\\u533a\",\"detail\":\"\\u65b0\\u6e2f\\u4e2d\\u8def397\\u53f7\"}' , 1628561605 , 1628561605) [ RunTime:0.002073s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.002587s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (5 , 2 , 542) [ RunTime:0.001140s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:13:25+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/pay/pre_order
+[ log ] www.king.com/api/v1/pay/pre_order [运行时间：0.463244s][吞吐率：2.16req/s] [内存消耗：4,119.80kb] [文件加载：69]
+[ error ] array (
+  'return_code' => 'FAIL',
+  'return_msg' => '错误的签名，验签失败',
+)
+[ error ] 获取预支付订单失败
+[ error ] [8]未定义数组索引: prepay_id[/Applications/XAMPP/xamppfiles/htdocs/zerg/application/api/service/Pay.php:112]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:14:11+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] www.king.com/api/v1/order [运行时间：0.054403s][吞吐率：18.38req/s] [内存消耗：3,796.93kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000569s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002536s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (5) [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002089s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.002478s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`order_no` , `user_id` , `total_price` , `snap_img` , `snap_name` , `total_count` , `snap_items` , `snap_address` , `update_time` , `create_time`) VALUES ('E810616515050310' , 60 , 0.02 , 'http://www.king.com/images/product-dryfruit@2.png' , '春生龙眼 500克' , 2 , '[{\"id\":5,\"name\":\"\\u6625\\u751f\\u9f99\\u773c 500\\u514b\",\"counts\":2,\"price\":\"0.01\",\"haveStock\":true,\"totalPrice\":0.02,\"main_img_url\":\"http:\\/\\/www.king.com\\/images\\/product-dryfruit@2.png\"}]' , '{\"id\":37,\"name\":\"\\u5f20\\u4e09\",\"mobile\":\"15234152623\",\"province\":\"\\u5e7f\\u4e1c\\u7701\",\"city\":\"\\u5e7f\\u5dde\\u5e02\",\"county\":\"\\u6d77\\u73e0\\u533a\",\"detail\":\"\\u65b0\\u6e2f\\u4e2d\\u8def397\\u53f7\"}' , 1628561651 , 1628561651) [ RunTime:0.000852s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.001730s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (5 , 2 , 543) [ RunTime:0.000423s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:14:11+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/pay/pre_order
+[ log ] www.king.com/api/v1/pay/pre_order [运行时间：0.399158s][吞吐率：2.51req/s] [内存消耗：3,953.00kb] [文件加载：62]
+[ error ] array (
+  'return_code' => 'FAIL',
+  'return_msg' => '错误的签名，验签失败',
+)
+[ error ] 获取预支付订单失败
+
+---------------------------------------------------------------
+[ 2021-08-10T10:49:57+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/verify
+[ log ] www.king.com/api/v1/token/verify [运行时间：0.064533s][吞吐率：15.50req/s] [内存消耗：1,536.89kb] [文件加载：35]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:49:57+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/address
+[ log ] www.king.com/api/v1/address [运行时间：0.099817s][吞吐率：10.02req/s] [内存消耗：3,236.59kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000513s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.007007s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.001022s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:49:57+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/by_user?page=1
+[ log ] www.king.com/api/v1/order/by_user?page=1 [运行时间：0.056781s][吞吐率：17.61req/s] [内存消耗：3,699.53kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000558s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.003250s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `user_id` = 60 ORDER BY create_time desc LIMIT 0,16 [ RunTime:0.001098s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:49:58+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/by_user?page=1
+[ log ] www.king.com/api/v1/order/by_user?page=1 [运行时间：0.057107s][吞吐率：17.51req/s] [内存消耗：3,699.47kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000530s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.002556s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `user_id` = 60 ORDER BY create_time desc LIMIT 0,16 [ RunTime:0.000626s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:50:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/address
+[ log ] www.king.com/api/v1/address [运行时间：0.042419s][吞吐率：23.57req/s] [内存消耗：3,236.49kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000522s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002727s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000571s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:50:03+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] www.king.com/api/v1/order [运行时间：0.055357s][吞吐率：18.06req/s] [内存消耗：3,796.92kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000563s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.001941s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (5) [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002022s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.002531s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`order_no` , `user_id` , `total_price` , `snap_img` , `snap_name` , `total_count` , `snap_items` , `snap_address` , `update_time` , `create_time`) VALUES ('E810638032195453' , 60 , 0.02 , 'http://www.king.com/images/product-dryfruit@2.png' , '春生龙眼 500克' , 2 , '[{\"id\":5,\"name\":\"\\u6625\\u751f\\u9f99\\u773c 500\\u514b\",\"counts\":2,\"price\":\"0.01\",\"haveStock\":true,\"totalPrice\":0.02,\"main_img_url\":\"http:\\/\\/www.king.com\\/images\\/product-dryfruit@2.png\"}]' , '{\"id\":37,\"name\":\"\\u5f20\\u4e09\",\"mobile\":\"15234152623\",\"province\":\"\\u5e7f\\u4e1c\\u7701\",\"city\":\"\\u5e7f\\u5dde\\u5e02\",\"county\":\"\\u6d77\\u73e0\\u533a\",\"detail\":\"\\u65b0\\u6e2f\\u4e2d\\u8def397\\u53f7\"}' , 1628563803 , 1628563803) [ RunTime:0.001046s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.002441s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (5 , 2 , 544) [ RunTime:0.000303s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:50:03+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/pay/pre_order
+[ log ] www.king.com/api/v1/pay/pre_order [运行时间：0.423022s][吞吐率：2.36req/s] [内存消耗：3,953.00kb] [文件加载：62]
+[ error ] array (
+  'return_code' => 'FAIL',
+  'return_msg' => '错误的签名，验签失败',
+)
+[ error ] 获取预支付订单失败
+
+---------------------------------------------------------------
+[ 2021-08-10T10:51:04+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] www.king.com/api/v1/order [运行时间：0.084935s][吞吐率：11.77req/s] [内存消耗：3,796.66kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000794s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002187s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (5) [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002489s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.002031s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`order_no` , `user_id` , `total_price` , `snap_img` , `snap_name` , `total_count` , `snap_items` , `snap_address` , `update_time` , `create_time`) VALUES ('E810638646903302' , 60 , 0.02 , 'http://www.king.com/images/product-dryfruit@2.png' , '春生龙眼 500克' , 2 , '[{\"id\":5,\"name\":\"\\u6625\\u751f\\u9f99\\u773c 500\\u514b\",\"counts\":2,\"price\":\"0.01\",\"haveStock\":true,\"totalPrice\":0.02,\"main_img_url\":\"http:\\/\\/www.king.com\\/images\\/product-dryfruit@2.png\"}]' , '{\"id\":37,\"name\":\"\\u5f20\\u4e09\",\"mobile\":\"15234152623\",\"province\":\"\\u5e7f\\u4e1c\\u7701\",\"city\":\"\\u5e7f\\u5dde\\u5e02\",\"county\":\"\\u6d77\\u73e0\\u533a\",\"detail\":\"\\u65b0\\u6e2f\\u4e2d\\u8def397\\u53f7\"}' , 1628563864 , 1628563864) [ RunTime:0.000974s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.002272s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (5 , 2 , 545) [ RunTime:0.000457s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T10:51:05+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/pay/pre_order
+[ log ] www.king.com/api/v1/pay/pre_order [运行时间：0.414195s][吞吐率：2.41req/s] [内存消耗：3,953.00kb] [文件加载：62]
+[ error ] array (
+  'return_code' => 'FAIL',
+  'return_msg' => '错误的签名，验签失败',
+)
+[ error ] 获取预支付订单失败
+
+---------------------------------------------------------------
+[ 2021-08-10T11:12:18+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] www.king.com/api/v1/order [运行时间：0.097011s][吞吐率：10.31req/s] [内存消耗：3,796.66kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001138s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.005794s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (5) [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002182s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.003048s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`order_no` , `user_id` , `total_price` , `snap_img` , `snap_name` , `total_count` , `snap_items` , `snap_address` , `update_time` , `create_time`) VALUES ('E810651381912364' , 60 , 0.02 , 'http://www.king.com/images/product-dryfruit@2.png' , '春生龙眼 500克' , 2 , '[{\"id\":5,\"name\":\"\\u6625\\u751f\\u9f99\\u773c 500\\u514b\",\"counts\":2,\"price\":\"0.01\",\"haveStock\":true,\"totalPrice\":0.02,\"main_img_url\":\"http:\\/\\/www.king.com\\/images\\/product-dryfruit@2.png\"}]' , '{\"id\":37,\"name\":\"\\u5f20\\u4e09\",\"mobile\":\"15234152623\",\"province\":\"\\u5e7f\\u4e1c\\u7701\",\"city\":\"\\u5e7f\\u5dde\\u5e02\",\"county\":\"\\u6d77\\u73e0\\u533a\",\"detail\":\"\\u65b0\\u6e2f\\u4e2d\\u8def397\\u53f7\"}' , 1628565138 , 1628565138) [ RunTime:0.001533s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.002183s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (5 , 2 , 546) [ RunTime:0.000320s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T11:12:18+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/pay/pre_order
+[ log ] www.king.com/api/v1/pay/pre_order [运行时间：0.418110s][吞吐率：2.39req/s] [内存消耗：3,953.00kb] [文件加载：62]
+[ error ] array (
+  'return_code' => 'FAIL',
+  'return_msg' => '错误的签名，验签失败',
+)
+[ error ] 获取预支付订单失败
+
+---------------------------------------------------------------
+[ 2021-08-10T11:13:15+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/verify
+[ log ] www.king.com/api/v1/token/verify [运行时间：0.021037s][吞吐率：47.54req/s] [内存消耗：1,536.89kb] [文件加载：35]
+
+---------------------------------------------------------------
+[ 2021-08-10T11:13:15+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/address
+[ log ] www.king.com/api/v1/address [运行时间：0.065247s][吞吐率：15.33req/s] [内存消耗：3,236.59kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000539s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002795s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000541s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T11:13:15+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/by_user?page=1
+[ log ] www.king.com/api/v1/order/by_user?page=1 [运行时间：0.063160s][吞吐率：15.83req/s] [内存消耗：3,703.44kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000603s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.002764s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `user_id` = 60 ORDER BY create_time desc LIMIT 0,16 [ RunTime:0.001585s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T11:13:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/by_user?page=1
+[ log ] www.king.com/api/v1/order/by_user?page=1 [运行时间：0.105833s][吞吐率：9.45req/s] [内存消耗：3,703.62kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000540s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.003057s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `user_id` = 60 ORDER BY create_time desc LIMIT 0,16 [ RunTime:0.000707s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T11:13:20+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/address
+[ log ] www.king.com/api/v1/address [运行时间：0.042027s][吞吐率：23.79req/s] [内存消耗：3,236.49kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001765s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.005192s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000648s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T11:13:22+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] www.king.com/api/v1/order [运行时间：0.052637s][吞吐率：19.00req/s] [内存消耗：3,796.91kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000516s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.001986s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (5) [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002354s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 60 LIMIT 1 [ RunTime:0.000493s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.002809s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`order_no` , `user_id` , `total_price` , `snap_img` , `snap_name` , `total_count` , `snap_items` , `snap_address` , `update_time` , `create_time`) VALUES ('E810652020236387' , 60 , 0.02 , 'http://www.king.com/images/product-dryfruit@2.png' , '春生龙眼 500克' , 2 , '[{\"id\":5,\"name\":\"\\u6625\\u751f\\u9f99\\u773c 500\\u514b\",\"counts\":2,\"price\":\"0.01\",\"haveStock\":true,\"totalPrice\":0.02,\"main_img_url\":\"http:\\/\\/www.king.com\\/images\\/product-dryfruit@2.png\"}]' , '{\"id\":37,\"name\":\"\\u5f20\\u4e09\",\"mobile\":\"15234152623\",\"province\":\"\\u5e7f\\u4e1c\\u7701\",\"city\":\"\\u5e7f\\u5dde\\u5e02\",\"county\":\"\\u6d77\\u73e0\\u533a\",\"detail\":\"\\u65b0\\u6e2f\\u4e2d\\u8def397\\u53f7\"}' , 1628565201 , 1628565201) [ RunTime:0.000954s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.002892s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (5 , 2 , 547) [ RunTime:0.000336s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T11:13:22+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/pay/pre_order
+[ log ] www.king.com/api/v1/pay/pre_order [运行时间：0.442393s][吞吐率：2.26req/s] [内存消耗：3,953.00kb] [文件加载：62]
+[ error ] array (
+  'return_code' => 'FAIL',
+  'return_msg' => '错误的签名，验签失败',
+)
+[ error ] 获取预支付订单失败
+
+---------------------------------------------------------------
+[ 2021-08-10T12:21:02+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/verify
+[ log ] www.king.com/api/v1/token/verify [运行时间：0.032660s][吞吐率：30.62req/s] [内存消耗：1,536.87kb] [文件加载：35]
+
+---------------------------------------------------------------
+[ 2021-08-10T12:21:34+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/category/
+[ log ] www.king.com/api/v1/category/ [运行时间：0.057378s][吞吐率：17.43req/s] [内存消耗：2,948.60kb] [文件加载：46]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001151s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.003732s ]
+[ sql ] [ SQL ] SELECT * FROM `category` [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002752s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (6,5,7,4,8,9) [ RunTime:0.000485s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T12:21:34+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/by_category?id=2
+[ log ] www.king.com/api/v1/product/by_category?id=2 [运行时间：0.039810s][吞吐率：25.12req/s] [内存消耗：3,094.48kb] [文件加载：45]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000505s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002877s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 2 [ RunTime:0.000756s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T12:21:36+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/8
+[ log ] www.king.com/api/v1/product/8 [运行时间：0.052369s][吞吐率：19.10req/s] [内存消耗：3,360.35kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000400s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002086s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_image` [ RunTime:0.005296s ]
+[ sql ] [ SQL ] SELECT * FROM `product_image` WHERE  `product_id` = 8 ORDER BY `order`  asc [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_property` [ RunTime:0.002469s ]
+[ sql ] [ SQL ] SELECT * FROM `product_property` WHERE  `product_id` = 8 [ RunTime:0.000519s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:47:17+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] www.king.com/api/v1/token/user [运行时间：0.295184s][吞吐率：3.39req/s] [内存消耗：3,143.50kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001430s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.005099s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oL88T5MjKk3YWYERZvDZKJIMf1yM' LIMIT 1 [ RunTime:0.000926s ]
+[ sql ] [ SQL ] INSERT INTO `user` (`openid`) VALUES ('oL88T5MjKk3YWYERZvDZKJIMf1yM') [ RunTime:0.003415s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:47:17+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] www.king.com/api/v1/token/user [运行时间：0.249430s][吞吐率：4.01req/s] [内存消耗：3,146.38kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000500s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003688s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oL88T5MjKk3YWYERZvDZKJIMf1yM' LIMIT 1 [ RunTime:0.000794s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:47:17+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] www.king.com/api/v1/token/user [运行时间：0.238171s][吞吐率：4.20req/s] [内存消耗：3,146.38kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000612s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003125s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oL88T5MjKk3YWYERZvDZKJIMf1yM' LIMIT 1 [ RunTime:0.000546s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:47:17+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/by_user?page=1
+[ log ] www.king.com/api/v1/order/by_user?page=1 [运行时间：0.111894s][吞吐率：8.94req/s] [内存消耗：3,689.92kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001053s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.007241s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `user_id` = 61 ORDER BY create_time desc LIMIT 0,16 [ RunTime:0.001172s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:47:27+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/verify
+[ log ] www.king.com/api/v1/token/verify [运行时间：0.040981s][吞吐率：24.40req/s] [内存消耗：1,536.89kb] [文件加载：35]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:47:28+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/by_user?page=1
+[ log ] www.king.com/api/v1/order/by_user?page=1 [运行时间：0.129066s][吞吐率：7.75req/s] [内存消耗：3,689.71kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000573s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.003009s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `user_id` = 61 ORDER BY create_time desc LIMIT 0,16 [ RunTime:0.000708s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:47:44+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/verify
+[ log ] www.king.com/api/v1/token/verify [运行时间：0.022488s][吞吐率：44.47req/s] [内存消耗：1,536.89kb] [文件加载：35]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:47:44+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/by_user?page=1
+[ log ] www.king.com/api/v1/order/by_user?page=1 [运行时间：0.079192s][吞吐率：12.63req/s] [内存消耗：3,689.71kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000764s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.004849s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `user_id` = 61 ORDER BY create_time desc LIMIT 0,16 [ RunTime:0.000640s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:47:49+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/category/
+[ log ] www.king.com/api/v1/category/ [运行时间：0.042424s][吞吐率：23.57req/s] [内存消耗：2,949.05kb] [文件加载：46]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000496s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.002754s ]
+[ sql ] [ SQL ] SELECT * FROM `category` [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.003229s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (6,5,7,4,8,9) [ RunTime:0.000666s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:47:49+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/by_category?id=2
+[ log ] www.king.com/api/v1/product/by_category?id=2 [运行时间：0.038367s][吞吐率：26.06req/s] [内存消耗：3,094.47kb] [文件加载：45]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000447s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002389s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 2 [ RunTime:0.000676s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:48:04+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/8
+[ log ] www.king.com/api/v1/product/8 [运行时间：0.085134s][吞吐率：11.75req/s] [内存消耗：3,360.60kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000732s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002615s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_image` [ RunTime:0.002250s ]
+[ sql ] [ SQL ] SELECT * FROM `product_image` WHERE  `product_id` = 8 ORDER BY `order`  asc [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_property` [ RunTime:0.002032s ]
+[ sql ] [ SQL ] SELECT * FROM `product_property` WHERE  `product_id` = 8 [ RunTime:0.000401s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:48:09+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/8
+[ log ] www.king.com/api/v1/product/8 [运行时间：0.073624s][吞吐率：13.58req/s] [内存消耗：3,360.62kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000650s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.004034s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_image` [ RunTime:0.002906s ]
+[ sql ] [ SQL ] SELECT * FROM `product_image` WHERE  `product_id` = 8 ORDER BY `order`  asc [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_property` [ RunTime:0.002353s ]
+[ sql ] [ SQL ] SELECT * FROM `product_property` WHERE  `product_id` = 8 [ RunTime:0.000684s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:48:15+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/address
+[ log ] www.king.com/api/v1/address [运行时间：0.066530s][吞吐率：15.03req/s] [内存消耗：3,236.48kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000681s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002712s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 61 LIMIT 1 [ RunTime:0.000507s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:48:16+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] www.king.com/api/v1/order [运行时间：0.054965s][吞吐率：18.19req/s] [内存消耗：3,797.07kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000613s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002402s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (8) [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002280s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 61 LIMIT 1 [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.002827s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`order_no` , `user_id` , `total_price` , `snap_img` , `snap_name` , `total_count` , `snap_items` , `snap_address` , `update_time` , `create_time`) VALUES ('E810780967335889' , 61 , 0.01 , 'http://www.king.com/images/product-dryfruit@3.png' , '夏日芒果 3个' , 1 , '[{\"id\":8,\"name\":\"\\u590f\\u65e5\\u8292\\u679c 3\\u4e2a\",\"counts\":1,\"price\":\"0.01\",\"haveStock\":true,\"totalPrice\":0.01,\"main_img_url\":\"http:\\/\\/www.king.com\\/images\\/product-dryfruit@3.png\"}]' , '{\"id\":38,\"name\":\"\\u5f20\\u4e09\",\"mobile\":\"15234152623\",\"province\":\"\\u5e7f\\u4e1c\\u7701\",\"city\":\"\\u5e7f\\u5dde\\u5e02\",\"county\":\"\\u6d77\\u73e0\\u533a\",\"detail\":\"\\u65b0\\u6e2f\\u4e2d\\u8def397\\u53f7\"}' , 1628578096 , 1628578096) [ RunTime:0.001022s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.002266s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (8 , 1 , 548) [ RunTime:0.000454s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T14:48:17+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/pay/pre_order
+[ log ] www.king.com/api/v1/pay/pre_order [运行时间：0.430500s][吞吐率：2.32req/s] [内存消耗：3,952.73kb] [文件加载：62]
+[ error ] array (
+  'return_code' => 'FAIL',
+  'return_msg' => '错误的签名，验签失败',
+)
+[ error ] 获取预支付订单失败
+
+---------------------------------------------------------------
+[ 2021-08-10T17:56:48+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/banner/1
+[ log ] www.king.com/api/v1/banner/1 [运行时间：0.088587s][吞吐率：11.29req/s] [内存消耗：3,307.00kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005424s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.009891s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.006101s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.003729s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.004995s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.001373s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T17:57:15+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/banner/1
+[ log ] www.king.com/api/v1/banner/1 [运行时间：0.058020s][吞吐率：17.24req/s] [内存消耗：3,307.33kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000556s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.004506s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.002506s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002408s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.000577s ]
+
+---------------------------------------------------------------
+[ 2021-08-10T17:57:22+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/banner/1
+[ log ] www.king.com/api/v1/banner/1 [运行时间：0.053102s][吞吐率：18.83req/s] [内存消耗：3,307.25kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000542s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.002784s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.002329s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.000672s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.000481s ]
+
+---------------------------------------------------------------

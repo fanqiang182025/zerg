@@ -1,0 +1,75 @@
+[ 2021-08-21T16:15:25+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/verify
+[ log ] www.king.com/api/v1/token/verify [运行时间：0.076345s][吞吐率：13.10req/s] [内存消耗：1,536.86kb] [文件加载：35]
+
+---------------------------------------------------------------
+[ 2021-08-21T16:15:25+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/banner/1
+[ log ] www.king.com/api/v1/banner/1 [运行时间：0.230867s][吞吐率：4.33req/s] [内存消耗：3,307.02kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029070s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.053052s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.064329s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.012973s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001734s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002774s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.003821s ]
+
+---------------------------------------------------------------
+[ 2021-08-21T16:15:25+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/recent?count=15
+[ log ] www.king.com/api/v1/product/recent?count=15 [运行时间：0.103829s][吞吐率：9.63req/s] [内存消耗：3,096.39kb] [文件加载：45]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000785s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002898s ]
+[ sql ] [ SQL ] SELECT * FROM `product` ORDER BY `create_time`  desc LIMIT 15 [ RunTime:0.002015s ]
+
+---------------------------------------------------------------
+[ 2021-08-21T16:15:25+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/theme/?ids=1,2,3
+[ log ] www.king.com/api/v1/theme/?ids=1,2,3 [运行时间：0.174528s][吞吐率：5.73req/s] [内存消耗：3,221.88kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003064s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.009564s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` IN (1,2,3) [ RunTime:0.001942s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.011405s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.000441s ]
+
+---------------------------------------------------------------
+[ 2021-08-21T16:15:27+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] www.king.com/api/v1/token/user [运行时间：0.295661s][吞吐率：3.38req/s] [内存消耗：3,146.31kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001006s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002702s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'o6P4r5C90qfgzHPzxihqOdtCOK80' LIMIT 1 [ RunTime:0.000641s ]
+
+---------------------------------------------------------------
+[ 2021-08-21T16:22:04+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/verify
+[ log ] www.king.com/api/v1/token/verify [运行时间：0.137511s][吞吐率：7.27req/s] [内存消耗：1,536.89kb] [文件加载：35]
+
+---------------------------------------------------------------
+[ 2021-08-21T16:22:06+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/verify
+[ log ] www.king.com/api/v1/token/verify [运行时间：0.022259s][吞吐率：44.93req/s] [内存消耗：1,536.76kb] [文件加载：35]
+
+---------------------------------------------------------------
+[ 2021-08-21T16:22:06+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/banner/1
+[ log ] www.king.com/api/v1/banner/1 [运行时间：0.072935s][吞吐率：13.71req/s] [内存消耗：3,306.91kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005606s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.005957s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.002640s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002482s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.001137s ]
+
+---------------------------------------------------------------
+[ 2021-08-21T16:22:06+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/theme/?ids=1,2,3
+[ log ] www.king.com/api/v1/theme/?ids=1,2,3 [运行时间：0.081274s][吞吐率：12.30req/s] [内存消耗：3,221.88kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000796s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.003286s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` IN (1,2,3) [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.003954s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.000504s ]
+
+---------------------------------------------------------------
+[ 2021-08-21T16:22:06+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/recent?count=15
+[ log ] www.king.com/api/v1/product/recent?count=15 [运行时间：0.135815s][吞吐率：7.36req/s] [内存消耗：3,095.95kb] [文件加载：45]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000600s ] mysql:dbname=zerg;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.003157s ]
+[ sql ] [ SQL ] SELECT * FROM `product` ORDER BY `create_time`  desc LIMIT 15 [ RunTime:0.000765s ]
+
+---------------------------------------------------------------

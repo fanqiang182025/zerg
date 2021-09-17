@@ -1,0 +1,25 @@
+<script>
+	var data = {
+        'key': 'value',
+        'key1': 'value1',
+        'key2': 'value2',
+        'key3': 'value3'
+    }
+   
+   //排序的函数
+   	function Sort(arys) {
+       	var newkey = Object.keys(arys).sort();
+       	var newObj = '';
+       	for (var i = 0; i < newkey.length; i++) {
+           newObj += [newkey[i]] + '=' + arys[newkey[i]] + '&';
+       	}
+
+    	data =  newObj.substring(0, newObj.length - 1); 
+    	
+    	return data;
+  	}
+
+  	console.log(typeof(Sort(data)) );
+
+ 
+</script>
