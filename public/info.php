@@ -10,16 +10,27 @@
     $dbname = 'zerg';
     $user = 'root';
     $password = '';
-    $user_name = "王帅";
+    //$user_name = "王帅";
 
     try{
-        // $db = new PDO("mysql:host=$host;dbname=$dbname",$user,$password);
+        $db = new PDO("mysql:host=$host;dbname=$dbname",$user,$password);
         // $sql = 'select id,title,content from message where id = :id';
         // $stmt = $db->prepare($sql);
         // $des = $stmt->execute([':id'=>1]);
         // $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         // var_dump($result);
         // exit;
+        // $sql = 'delete from message where id = :id';
+        // $stmt = $db->prepare($sql);
+        // $stmt->execute([':id'=>1]);
+        // echo $stmt->rowCount();
+
+        $sql = 'update message set user_name=:name where id = :id';
+        $stmt = $db->prepare($sql);
+        $stmt->execute([':name'=>'123',':id'=>2]);
+        echo $stmt->rowCount();
+        exit;
+
 
         $sql = 'insert into message(title,content,create_at,user_name) values (:title,:content,:create_at,:user_name)';
         $stmt = $db->prepare($sql);
